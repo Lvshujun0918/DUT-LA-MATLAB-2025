@@ -28,6 +28,10 @@
   - 行列式、逆矩阵和秩的计算
   - 矩阵方程求解
 
+## 编译指令
+```bash
+pandoc *.md -o output.pdf --pdf-engine=xelatex --template=eisvogel.latex  --listings  --number-sections
+```
 
 ## 使用方法
 
