@@ -1,11 +1,18 @@
+---
+title: "线性代数上机课-第一次作业"
+author: "吕舒君"
+date: "2025-11-16"
+output: pdf_document
+pdf-engine: xelatex
+---
 ## 上机作业（一）
-随机生成5阶方阵\( \mathbf{A}, \mathbf{B}, \mathbf{C} \)及5维列向量\( \mathbf{b}\) 
-1. $\mathbf{A+B}, \\mathbf{A-B}$
+随机生成5阶方阵$ \mathbf{A}, \mathbf{B}, \mathbf{C} $及5维列向量$ \mathbf{b}$ 
+1. $\mathbf{A+B}, \mathbf{A-B}$
 2. $\mathbf{A*B+B*A}$
 3. $\mathbf{A,B}$的行列式，逆，秩
-4. $\mathbf{A*B}$的行列式，逆，秩，并验证\( \det(\mathbf{A*B})=\det(\mathbf{A})*\det(\mathbf{B}) \)
-5. 验证\( (\mathbf{AB})^T = \mathbf{B}^T\mathbf{A}^T, (\mathbf{AB})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}, \mathbf{AB} \neq \mathbf{BA}\)
-6. 求矩阵\( \mathbf{X} \)使得\( \mathbf{AXB=C} \)
+4. $\mathbf{A*B}$的行列式，逆，秩，并验证$ \det(\mathbf{A*B})=\det(\mathbf{A})*\det(\mathbf{B}) $
+5. 验证$ (\mathbf{AB})^T = \mathbf{B}^T\mathbf{A}^T, (\mathbf{AB})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}, \mathbf{AB} \neq \mathbf{BA}$
+6. 求矩阵$ \mathbf{X} $使得$ \mathbf{AXB=C} $
 ### 代码
 ```matlab
 A=rand(4,4)
@@ -418,7 +425,7 @@ data=readmatrix('fj.xlsx')
 A=data(:,1:6)
 b=data(:,7)
 x1=A\b
-x2=(A'*A)\(A'*b)
+x2=(A'*A)$A'*b)
 ```
 ### 结果
 ```
