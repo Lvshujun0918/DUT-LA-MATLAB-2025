@@ -2,17 +2,33 @@
 title: "线性代数上机课-第一次作业"
 author: "吕舒君"
 date: "2025-11-16"
+footer-center: "大连理工大学 20252111170"
 output: pdf_document
-pdf-engine: xelatex
+CJKmainfont: Noto Serif CJK SC
+CJKsansfont: Noto Sans CJK SC
+CJKmonofont: Noto Sans Mono CJK SC
+mainfont: Libertinus Serif
+sansfont: Libertinus Sans
 ---
+# 线性代数上机课-第一次作业
+
+姓名：吕舒君
+
+班级：软国际2508
+
+学号：20252111170
+
 ## 上机作业（一）
-随机生成5阶方阵$ \mathbf{A}, \mathbf{B}, \mathbf{C} $及5维列向量$ \mathbf{b}$ 
+
+随机生成5阶方阵$\mathbf{A}, \mathbf{B}, \mathbf{C}$及5维列向量$\mathbf{b}$ 
+
 1. $\mathbf{A+B}, \mathbf{A-B}$
 2. $\mathbf{A*B+B*A}$
 3. $\mathbf{A,B}$的行列式，逆，秩
-4. $\mathbf{A*B}$的行列式，逆，秩，并验证$ \det(\mathbf{A*B})=\det(\mathbf{A})*\det(\mathbf{B}) $
-5. 验证$ (\mathbf{AB})^T = \mathbf{B}^T\mathbf{A}^T, (\mathbf{AB})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}, \mathbf{AB} \neq \mathbf{BA}$
-6. 求矩阵$ \mathbf{X} $使得$ \mathbf{AXB=C} $
+4. $\mathbf{A*B}$的行列式，逆，秩，并验证$\det(\mathbf{A*B})=\det(\mathbf{A})*\det(\mathbf{B})$
+5. 验证$(\mathbf{AB})^T = \mathbf{B}^T\mathbf{A}^T, (\mathbf{AB})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}, \mathbf{AB} \neq \mathbf{BA}$
+6. 求矩阵$\mathbf{X}$使得$\mathbf{AXB=C}$
+
 ### 代码
 ```matlab
 A=rand(4,4)
@@ -42,13 +58,13 @@ rank(A*B)
 det(A)*det(B)
 
 disp("5.验证(AB)^T=B^TA^T,(AB)^-1=B^-1A^-1,AB!=BA")
-disp("①")
+disp("（1）")
 (A*B)'
 B'*A'
-disp("②")
+disp("（2）")
 inv(A*B)
 inv(B)*inv(A)
-disp("③")
+disp("（3）")
 A*B
 B*A
 
@@ -177,7 +193,7 @@ ans =
     0.0290
 
 5.验证(AB)^T=B^TA^T,(AB)^-1=B^-1A^-1,AB!=BA
-①
+（1）
 
 ans =
 
@@ -194,7 +210,7 @@ ans =
     0.9854    0.8563    1.6102    1.0485
     1.6647    1.5554    2.1996    1.9251
 
-②
+（2）
 
 ans =
 
@@ -211,7 +227,7 @@ ans =
     2.1676   -0.9355    2.0325   -3.4408
    -4.0910    2.8493   -0.6026    2.4436
 
-③
+（3）
 
 ans =
 
@@ -255,7 +271,7 @@ B=rand(4,4)
 C=rand(4,4)
 D=rand(4,4)
 
-disp("①")
+disp("（1）")
 det([A,B;C,D])
 det(A)*det(D)-det(B)*det(C)
 
@@ -266,7 +282,7 @@ A=diag(a1)
 c1=rand(1,4)
 C=diag(c1)
 
-disp("②")
+disp("（2）")
 det([A,B;C,D])
 det(A*D-C*B)
 ```
@@ -304,7 +320,7 @@ D =
     0.3674    0.9133    0.3354    0.1068
     0.9880    0.7962    0.6797    0.6538
 
-①
+（1）
 
 ans =
 
@@ -341,7 +357,7 @@ C =
          0         0    0.6987         0
          0         0         0    0.1978
 
-②
+（2）
 
 ans =
 
@@ -355,10 +371,12 @@ ans =
 
 ## 上机作业（三）
 生成4阶随机矩阵$\mathbf{A}$，完成下面操作：
+
 - 取出$\mathbf{A}$的前3行构成矩阵$\mathbf{B}$；
 - 取出$\mathbf{A}$的前2列构成矩阵$\mathbf{C}$；
 - 右下角$3{\times}2$矩阵构成矩阵$\mathbf{D}$；
 - $\mathbf{B}$与$\mathbf{C}$的乘积构成矩阵$\mathbf{E}$。
+
 ### 代码
 ```matlab
 A=rand(4,4)
@@ -367,6 +385,7 @@ C=A(:,1:2)
 D=A(2:4,3:4)
 E=B*C
 ```
+
 ### 结果
 ```
 A =
@@ -425,7 +444,7 @@ data=readmatrix('fj.xlsx')
 A=data(:,1:6)
 b=data(:,7)
 x1=A\b
-x2=(A'*A)$A'*b)
+x2=(A'*A)\(A'*b)
 ```
 ### 结果
 ```
