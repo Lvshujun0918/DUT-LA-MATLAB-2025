@@ -1,7 +1,7 @@
 # 大连理工大学线性代数上机课
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2020b%2B-blue)
-![DUT](https://img.shields.io/badge/DUT-AG-yellow)
+![DUT](https://img.shields.io/badge/DUT-2025-yellow)
 
 这个仓库包含了使用MATLAB进行的线性代数上机课作业。
 
