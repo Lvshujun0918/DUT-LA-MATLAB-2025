@@ -18,6 +18,8 @@ sansfont: Libertinus Sans
 
 学号：20252111170
 
+任课老师：代万基老师
+
 ## 上机作业（一）
 
 随机生成5阶方阵$\mathbf{A}, \mathbf{B}, \mathbf{C}$及5维列向量$\mathbf{b}$ 
